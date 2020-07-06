@@ -1,11 +1,21 @@
 import React from 'react';
 import './App.css';
+import Instagram from './icons/instagram';
+import Github from './icons/github';
+import LinkedIn from './icons/linkedin';
+import Typewriter from 'typewriter-effect';
 
 function App() {
   return (
     <div className="App">
       <header>
-        <h1>alexSimpson..</h1>
+        <h1><Typewriter
+            onInit={(typewriter) => {
+              typewriter.typeString('alexSimpson')
+              .start();
+            }}
+          />
+          </h1>
         <ul>
           <li class="active"><a>projects</a></li>
           <li><a>about</a></li>
@@ -13,9 +23,9 @@ function App() {
         </ul>
       </header>
       <socials>
-          <div></div>
-          <div></div>
-          <div></div>
+          <div><Instagram /></div>
+          <div><Github /></div>
+          <div><LinkedIn /></div>
       </socials>
       <main>
         <div class="preview active"></div>
