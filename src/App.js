@@ -4,6 +4,7 @@ import Instagram from './icons/instagram';
 import Github from './icons/github';
 import LinkedIn from './icons/linkedin';
 import Typewriter from 'typewriter-effect';
+import FadeInSection from './scripts/fade';
 
 function App() {
   return (
@@ -11,33 +12,47 @@ function App() {
       <header>
         <h1><Typewriter
             onInit={(typewriter) => {
-              typewriter.typeString('alexSimpson')
+              typewriter.typeString('A // S')
               .start();
             }}
           />
           </h1>
         <ul>
-          <li class="active"><a>projects</a></li>
+          <li className="active"><a>projects</a></li>
           <li><a>about</a></li>
           <li><a>contact</a></li>
         </ul>
       </header>
-      <socials>
-          <div><Instagram /></div>
+      <div className="socials">
           <div><Github /></div>
           <div><LinkedIn /></div>
-      </socials>
+          <div><Instagram /></div>
+      </div>
       <main>
-        <div class="preview active"></div>
-        <div class="small preview">        
-          <div class="preview" id="top"></div>
-          <div class="preview"></div>
+        <FadeInSection>
+        <div className="large-preview">
+          <div className="tag"><h2>.projects</h2></div>
         </div>
-        <p>this is the main</p>
+        </FadeInSection>
+        <FadeInSection>
+        <div className="small-preview">        
+          <div id="left"></div>
+          <div id="middle"></div>
+          <div id="right"></div>
+        </div>
+        </FadeInSection>
+        <FadeInSection>
+        <div className="small-preview">        
+          <div id="left"></div>
+          <div id="middle"></div>
+          <div id="right"></div>
+        </div>
+        </FadeInSection>
       </main>
 
-      <footer>this is the footer
-
+      <footer>
+        <span id="c">&#169; copyright your mum</span>
+        <span id="b">back to the top</span>
       </footer>
     </div>
   );
