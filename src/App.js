@@ -3,7 +3,9 @@ import './App.css';
 import Socials from './icons/socials';
 import Typewriter from 'typewriter-effect';
 import FadeInSection from './scripts/fade';
-import Particles from 'react-tsparticles';
+import Particles from './scripts/particles';
+
+import astype from './images/astype.PNG';
 
 function App() {
   return (
@@ -25,96 +27,26 @@ function App() {
       
       
       <div class="intro">
-        <Particles id="tsparticles" params={{
-          fpsLimit: 60,
-          interactivity: {
-            detectsOn: "canvas",
-            events: {
-              onHover: {
-                enable: true,
-                mode: "repulse"
-              },
-              resize: true
-            },
-            modes: {
-              bubble: {
-                speed: 5
-              },
-              push: {
-                quantity: 2
-              },
-              repulse: {
-                distance: 100,
-                duration: 0.4
-              }
-            }
-          },
-          particles: {
-            color: {
-              value: "#ffffff"
-            },
-            links: {
-              color: "#ffffff",
-              distance: 150,
-              enable: true,
-              opacity: 0.5,
-              width: 1
-            },
-            collisions: {
-              enable: true
-            },
-            move: {
-              direction: "none",
-              enable: true,
-              outMode: "bounce",
-              random: false,
-              speed: 2,
-              straight: false
-            },
-            number: {
-              density: {
-                enable: true,
-                value_area: 800
-              },
-              value: 80
-            },
-            opacity: {
-              value: 0.5
-            },
-            shape: {
-              type: "circle"
-            },
-            size: {
-              random: true,
-              value: 5
-            }
-          },
-          detectRetina: true
-        }}/>
+        <Particles />
         <h1><FadeInSection>Hi there!</FadeInSection></h1>
       </div>
 
       <Socials />
       <main>
-        <FadeInSection>
-        <div className="large-preview">
-          <div className="tag"><h2>.projects</h2></div>
+        <div className="projects">
+        <h2>01 .projects</h2>
+          <FadeInSection>
+          <div className="large-preview">
+            <img src={astype}></img>
+          </div>
+          </FadeInSection>
+          <FadeInSection>
+          <div className="small-preview">        
+            <div id="left"></div>
+            <div id="middle"></div>
+          </div>
+          </FadeInSection>
         </div>
-        </FadeInSection>
-        <FadeInSection>
-        <div className="small-preview">        
-          <div id="left"></div>
-          <div id="middle"></div>
-          <div id="right"></div>
-        </div>
-        </FadeInSection>
-        <FadeInSection>
-        <div className="small-preview">        
-          <div id="left"></div>
-          <div id="middle"></div>
-          <div id="right"></div>
-        </div>
-        </FadeInSection>
       </main>
 
       <footer>

@@ -3,6 +3,10 @@
   margin: 0;
 }
 
+html::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background-color: #1d1e20;
   max-width: 1800px;
@@ -18,7 +22,7 @@ h1 {
 
 h2 {
   font-size: 1.8em;
-  color: whitesmoke;
+  color: #1d1e20;
 }
 
 h3 {
@@ -82,9 +86,14 @@ a {
 
 /* Header */
 header {
-  margin-top: 20px;
+  padding: 15px 0;
   display: block;
+  width: 1800px;
   height: 50px;
+  position: fixed;
+  top: 0;
+  z-index: 100;
+  background-color: #1d1e20;
 }
 
 header h1 {
@@ -129,7 +138,7 @@ a:hover:after {
 /* Intro Shot */
 .intro {
   width: 1500px;
-  margin: 75px auto 50px auto;
+  margin: 100px auto 50px auto;
   position: relative;
 }
 
@@ -147,29 +156,32 @@ a:hover:after {
 
 /* Main */ 
 main {
-  margin: 100px auto 0 auto;
+  margin: 200px auto 0 auto;
   max-width: 1300px;
 }
 
-main div.large-preview {
-  background-color: whitesmoke;
-  height: 730px;
-  width: 1300px;
-  margin: 0 auto;
-  opacity: 0.7;
-}
-
-main div.large-preview .tag{
-  background-color: whitesmoke;
+main h2 {
   height: 50px;
   width: 200px;
   position: relative;
-  left: -40px;
-  top: 20px;
+  left: -100px;
+  color: whitesmoke;
 }
 
-main div.large-preview .tag h2{
-  text-align: center;
+main div.large-preview {
+  height: 730px;
+  width: 1300px;
+  margin: 0 auto;
+  background-color: whitesmoke;
+  position: relative;
+}
+
+main div.large-preview img {
+  height: 100%;
+  border: none;
+  overflow: hidden;
+  max-width: 100%;
+  object-fit: cover;
 }
 
 main div.small-preview {
@@ -179,6 +191,7 @@ main div.small-preview {
   margin-left: 250px;
   margin: 40px auto 0px auto;
   opacity: 0.7;
+  position: relative;
 }
 
 main div.small-preview div{
@@ -203,6 +216,7 @@ footer {
   height: 25px;
   margin: 50px auto 50px auto;
   max-width: 1300px;
+  color: whitesmoke;
 }
 
 footer span#c {
