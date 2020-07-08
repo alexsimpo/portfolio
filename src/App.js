@@ -4,6 +4,7 @@ import Socials from './icons/socials';
 import Typewriter from 'typewriter-effect';
 import FadeInSection from './scripts/fade';
 import Particles from './scripts/particles';
+import Github from './icons/github';
 
 import astype from './images/astype.PNG';
 
@@ -34,16 +35,20 @@ function App() {
       <Socials />
       <main>
         <div className="projects">
-        <h2>01 .projects</h2>
           <FadeInSection>
-          <div className="large-preview">
-            <img src={astype}></img>
-          </div>
+          <h2>01 .projects</h2>
           </FadeInSection>
           <FadeInSection>
-          <div className="small-preview">        
-            <div id="left"></div>
-            <div id="middle"></div>
+          <div className="preview">
+            <div>
+              <img src={astype} alt="astype typing test"></img>
+              <div className="links">
+                <Github source="https://github.com/alexsimpo/as-type" />
+              </div>
+            </div>
+            <div><img src={astype} alt="astype typing test"></img></div>
+            <div><img src={astype} alt="astype typing test"></img></div>
+            <div><img src={astype} alt="astype typing test"></img></div>
           </div>
           </FadeInSection>
         </div>

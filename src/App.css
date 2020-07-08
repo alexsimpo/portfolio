@@ -157,56 +157,60 @@ a:hover:after {
 /* Main */ 
 main {
   margin: 200px auto 0 auto;
-  max-width: 1300px;
+  max-width: 1320px;
 }
 
 main h2 {
   height: 50px;
   width: 200px;
   position: relative;
-  left: -100px;
+  left: -60px;
   color: whitesmoke;
 }
 
-main div.large-preview {
-  height: 730px;
-  width: 1300px;
-  margin: 0 auto;
-  background-color: whitesmoke;
-  position: relative;
-}
-
-main div.large-preview img {
-  height: 100%;
+main div.preview div img {
   border: none;
   overflow: hidden;
-  max-width: 100%;
   object-fit: cover;
+  height: 100%;
+  max-width: 100%;
 }
 
-main div.small-preview {
+main div.preview {
   display: flex;
-  justify-content: center;
-  max-width: 1300px;
-  margin-left: 250px;
+  flex-wrap: wrap;
+  align-content: space-between;
   margin: 40px auto 0px auto;
-  opacity: 0.7;
   position: relative;
 }
 
-main div.small-preview div{
-  background-color: white;
-  height: 230px;
-  width: 410px;
-  margin: 0 auto;
+main div.preview div{
+  background-color: #f1f1f1;
+  width: 640px;
+  height: 360px;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  position: relative;
 }
 
-main div.small-preview div#left{
-  margin-left: 0;
+main div.preview div .links {
+  position: absolute;
+  bottom: 0;
+  left: 100%;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 20%;
+  height: 20%;
+  transition: .5s ease;
+  z-index: 10;
 }
 
-main div.small-preview div#right{
-  margin-right: 0;
+.links:hover {
+  width: 20%;
+  left: 80%;
 }
 
 /* Footer */
