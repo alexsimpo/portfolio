@@ -1,6 +1,6 @@
-language: react
-react: 
- - "16.13.1"
+language: node_js
+node_js: 
+ - "12.6.3"
 script: 
   - echo "Deploying"
 install: 
