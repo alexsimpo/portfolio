@@ -41,8 +41,6 @@ function App() {
         <div className="projects">
           <FadeInSection>
           <h2>01 .projects</h2>
-          </FadeInSection>
-          <FadeInSection>
           <div className="preview">
             <a href="http://astype.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
               <div className="single">

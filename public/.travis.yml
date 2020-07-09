@@ -1,0 +1,9 @@
+language: node_js
+node_js: 
+ - "12.6.3"
+script: 
+  - echo "Deploying"
+install: 
+  - npm install -g firebase-tools
+after_success:
+  - firebase deploy --token "1//0gCkKdl_oXHjzCgYIARAAGBASNwF-L9IrukfjP8f2Q1GGPvIadK6Q6qVUiK4YUPchLt8LBYaeEfHV3uLb77Lh3lcphilh0Ts6roY"

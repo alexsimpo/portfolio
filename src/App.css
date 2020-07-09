@@ -160,14 +160,14 @@ a.nav:hover:after {
 /* Main */ 
 main {
   margin: 300px auto 0 auto;
-  max-width: 1380px;
+  max-width: 1550px;
 }
 
 main h2 {
   height: 50px;
   width: 200px;
   position: relative;
-  left: -60px;
+  left: 60px;
   color: whitesmoke;
 }
 
@@ -191,8 +191,8 @@ main div.preview {
 
 main div.preview div.single {
   background-color: #f1f1f1;
-  width: 640px;
-  height: 360px;
+  width: 725px;
+  height: 405px;
   margin: 25px;
   text-align: center;
   line-height: 75px;
@@ -203,8 +203,8 @@ main div.preview div.single {
 
 main div.preview div.single:hover {
   cursor: pointer;
-  width: 650px;
-  height: 370px;
+  width: 735px;
+  height: 415px;
   margin: 20px;
   transition: ease .5s;
 }
