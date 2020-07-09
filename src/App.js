@@ -5,6 +5,7 @@ import Typewriter from 'typewriter-effect';
 import FadeInSection from './scripts/fade';
 import Particles from './scripts/particles';
 import Github from './icons/github';
+import Scroll from './scripts/scroll';
 
 import astype from './images/astype.PNG';
 import jammming from './images/jammming.PNG';
@@ -28,6 +29,7 @@ function App() {
         </ul>
       </header>
       
+      <Scroll />
       
       <div class="intro">
         <Particles />
