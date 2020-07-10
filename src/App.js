@@ -4,79 +4,64 @@ import Socials from './icons/socials';
 import Typewriter from 'typewriter-effect';
 import FadeInSection from './scripts/fade';
 import Particles from './scripts/particles';
-import Github from './icons/github';
-import Scroll from './scripts/scroll';
-
-import astype from './images/astype.PNG';
-import jammming from './images/jammming.PNG';
-import ravenous from './images/ravenous.PNG';
+import Projects from './content/projects';
+import { Link, animateScroll as scroll } from "react-scroll";
 
 function App() {
   return (
     <div className="App">
       <header>
-        <h1><Typewriter
-            onInit={(typewriter) => {
-              typewriter.typeString('A // S')
-              .start();
-            }}
-          />
+        <h1>A // S
           </h1>
-        <ul>
-          <li className="active"><a className="nav">projects</a></li>
-          <li><a className="nav">about</a></li>
-          <li><a className="nav">contact</a></li>
+        <ul className="navbar">
+          <li>
+            <Link
+            activeClass="active"
+            to="project"
+            spy={true}
+            smooth={true}
+            offset={-100}
+            duration= {500}>
+            projects</Link>
+          </li>
+          <li>
+            <Link
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {200}>
+            about</Link>
+          </li>
+          <li>
+            <Link
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            offset={-70}
+            duration= {200}>
+            contact</Link>
+          </li>
         </ul>
       </header>
       
-      <Scroll />
-      
       <div class="intro">
         <Particles />
-        <h1><FadeInSection>Welcome</FadeInSection></h1>
+        <h1><Typewriter
+            onInit={(typewriter) => {
+              typewriter.
+              pauseFor(1000)
+              .typeString('Hi, My Name Is Alex.')
+              .start();
+            }}
+          /></h1>
       </div>
 
       <Socials />
       <main>
-        <div className="projects">
-          <FadeInSection>
-          <h2>01 .projects</h2>
-          <div className="preview">
-            <a href="http://astype.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
-              <div className="single">
-                <div className="links">
-                  <Github source="https://github.com/alexsimpo/as-type" />
-                </div>
-                <img src={astype} alt="astype typing test"></img>
-              </div>
-            </a>
-            <a href="https://jammming-proj.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
-              <div className="single">
-                <div className="links">
-                  <Github source="https://github.com/alexsimpo/jammming" />
-                </div>
-                <img src={jammming} alt="jammming music playlists"></img>
-              </div>
-            </a>
-            <a href="https://alexsimpo.github.io/ravenous/" target="_blank" rel="noopener noreferrer" className="site-direct">
-              <div className="single">
-                <div className="links">
-                  <Github source="https://github.com/alexsimpo/ravenous" />
-                </div>
-                <img src={ravenous} alt="astype typing test"></img>
-              </div>
-            </a>
-            <a href="http://astype.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
-              <div className="single">
-                <div className="links">
-                  <Github source="https://github.com/alexsimpo/as-type" />
-                </div>
-                <img src={astype} alt="astype typing test"></img>
-              </div>
-            </a>
-          </div>
-          </FadeInSection>
-        </div>
+        <Projects />
       </main>
 
       <footer>

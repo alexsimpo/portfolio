@@ -32,7 +32,7 @@ export default class Scroll extends React.Component {
   
     render() {
       const progressContainerStyle = {
-        background: "#f8bbd0",
+        background: "whitesmoke",
         height: "5px",
         position: "fixed",
         bottom: "100px",
