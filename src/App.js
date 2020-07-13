@@ -5,11 +5,14 @@ import Typewriter from 'typewriter-effect';
 import FadeInSection from './scripts/fade';
 import Particles from './scripts/particles';
 import Projects from './content/projects';
+import Scroll from './scripts/scroll';
 import { Link, animateScroll as scroll } from "react-scroll";
+import peace from './images/peace.png';
 
 function App() {
   return (
     <div className="App">
+      <div id="header-bg"></div>
       <header>
         <h1>A // S
           </h1>
@@ -20,7 +23,7 @@ function App() {
             to="project"
             spy={true}
             smooth={true}
-            offset={-100}
+            offset={-80}
             duration= {500}>
             projects</Link>
           </li>
@@ -31,7 +34,7 @@ function App() {
             spy={true}
             smooth={true}
             offset={-70}
-            duration= {200}>
+            duration= {500}>
             about</Link>
           </li>
           <li>
@@ -41,7 +44,7 @@ function App() {
             spy={true}
             smooth={true}
             offset={-70}
-            duration= {200}>
+            duration= {500}>
             contact</Link>
           </li>
         </ul>
@@ -59,14 +62,51 @@ function App() {
           /></h1>
       </div>
 
+      <Scroll />
+
       <Socials />
       <main>
         <Projects />
+        <FadeInSection>
+          <div className="about">
+            <h3>02</h3>
+            <h2>about</h2>
+            <img id="peace" src={peace}></img>
+              <div id="right-about">
+                <h5 id="name-about">Alex Simpson</h5>
+                <h4 id="am-about">I am a</h4>
+                <h1 id="about-typewriter"><Typewriter 
+                options={{ loop: true, delay: 75 }}
+                onInit={(typewriter) => {
+                typewriter
+                .typeString('<span style="color: #f0e4a4">Web Developer</span>').pauseFor(1200)
+                .deleteAll().typeString('<span style="color: #e91e63">Digital Illustrator</span>').pauseFor(1200)
+                .deleteAll().typeString('<span style="color: #26D480">Programmer</span>').pauseFor(1200)
+                .deleteAll().typeString('<span style="color: #97B9EB">UX Designer</span>').pauseFor(1200)
+                .start();
+                }}
+              /></h1>
+            </div>
+          </div>
+        </FadeInSection>
+        <FadeInSection>
+          <div className="contact">
+            <h3>03</h3>
+            <h2>contact</h2>
+          </div>
+        </FadeInSection>
       </main>
 
       <footer>
         <span id="c">&#169; copyright your mum</span>
-        <span id="b">back to the top</span>
+        <span id="b"><Link
+            activeClass="active"
+            to="intro"
+            spy={true}
+            smooth={true}
+            offset={-110}
+            duration= {500}>
+            back to the top</Link></span>
       </footer>
     </div>
   );

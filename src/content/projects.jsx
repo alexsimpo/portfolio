@@ -10,7 +10,8 @@ export default class Projects extends Component {
         return (
             <div className="projects" id="project">
                 <FadeInSection>
-                <h2>01 .projects</h2>
+                <h3>01</h3>
+                <h2>projects</h2>
                 <div className="preview">
                     <a href="http://astype.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
                     <div className="single">
