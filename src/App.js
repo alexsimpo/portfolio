@@ -14,8 +14,15 @@ function App() {
     <div className="App">
       <div id="header-bg"></div>
       <header>
-        <h1>A // S
-          </h1>
+        <Link
+            activeClass="active"
+            to="intro"
+            spy={true}
+            smooth={true}
+            offset={-110}
+            duration= {500}>
+          <h1>A // S</h1>
+          </Link>
         <ul className="navbar">
           <li>
             <Link
@@ -30,7 +37,7 @@ function App() {
           <li>
             <Link
             activeClass="active"
-            to="about"
+            to="ab"
             spy={true}
             smooth={true}
             offset={-70}
@@ -40,7 +47,7 @@ function App() {
           <li>
             <Link
             activeClass="active"
-            to="contact"
+            to="ct"
             spy={true}
             smooth={true}
             offset={-70}
@@ -63,15 +70,16 @@ function App() {
       </div>
 
       <Scroll />
-
+      
       <Socials />
       <main>
         <Projects />
-        <FadeInSection>
+        <div id="ab"></div>
           <div className="about">
+            <FadeInSection position="up">
             <h3>02</h3>
             <h2>about</h2>
-            <img id="peace" src={peace}></img>
+              <img id="peace" src={peace}></img>
               <div id="right-about">
                 <h5 id="name-about">Alex Simpson</h5>
                 <h4 id="am-about">I am a</h4>
@@ -87,14 +95,16 @@ function App() {
                 }}
               /></h1>
             </div>
+            </FadeInSection>
           </div>
-        </FadeInSection>
-        <FadeInSection>
+        <div className="ct"></div>
           <div className="contact">
+            <FadeInSection position="up">
             <h3>03</h3>
             <h2>contact</h2>
+
+            </FadeInSection>
           </div>
-        </FadeInSection>
       </main>
 
       <footer>

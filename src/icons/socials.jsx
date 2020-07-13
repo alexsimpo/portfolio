@@ -26,6 +26,7 @@ export default class Socials extends Component {
                 </div>
             </a>
         </div>
+        
         );
     }
 }

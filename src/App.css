@@ -17,7 +17,7 @@ body {
 /* Fonts */
 
 h1 {
-  font-size: 2em;
+  font-size: 1.5em;
   color: whitesmoke;
 }
 
@@ -38,7 +38,7 @@ h4 {
 }
 
 h5 {
-  font-size: 4em;
+  font-size: 5em;
   color: whitesmoke;
   opacity: 0.25;
 }
@@ -49,15 +49,32 @@ a {
 }
 
 /* Fade In Effect */
-.fade-in-section {
-  opacity: 0;
+
+.up.fade-in-section {
   transform: translateY(20vh);
+  opacity: 0;
   visibility: hidden;
   transition: opacity 1200ms ease-out, transform 800ms ease-out,
     visibility 1200ms ease-out;
   will-change: opacity, transform, visibility;
 }
-.fade-in-section.is-visible {
+
+.up.fade-in-section.is-visible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+}
+
+.left.fade-in-section {
+  transform: translateX(-10vh);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 1200ms ease-out, transform 800ms ease-out,
+    visibility 1200ms ease-out;
+  will-change: opacity, transform, visibility;
+}
+
+.left.fade-in-section.is-visible {
   opacity: 1;
   transform: none;
   visibility: visible;
@@ -120,6 +137,7 @@ header, #header-bg {
 
 header h1 {
   float: left;
+  cursor: pointer;
 }
 
 header ul {
@@ -269,9 +287,17 @@ main div.preview div:hover .links{
   left: 85%;
 }
 
+.projects {
+  margin-bottom: 300px;
+}
+
 /* About */
 .about {
-  margin-top: 200px;
+  margin-bottom: 300px;
+}
+
+.about h2 {
+  margin-bottom: 50px;
 }
 
 .about #peace{

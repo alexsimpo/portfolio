@@ -9,7 +9,7 @@ export default class Projects extends Component {
     render(){
         return (
             <div className="projects" id="project">
-                <FadeInSection>
+                <FadeInSection position="up">
                 <h3>01</h3>
                 <h2>projects</h2>
                 <div className="preview">
