@@ -65,7 +65,7 @@ a {
   visibility: visible;
 }
 
-.left.fade-in-section {
+/* .left.fade-in-section {
   transform: translateX(-10vh);
   opacity: 0;
   visibility: hidden;
@@ -78,6 +78,43 @@ a {
   opacity: 1;
   transform: none;
   visibility: visible;
+}
+ */
+ 
+.page-appear {
+  opacity: 0;
+}
+
+.page-appear.page-appear-active {
+  opacity: 1;
+  transition: opacity 1.4s ease-in 1.2s;
+}
+
+.header-appear {
+  top: -100px;
+}
+
+.header-appear.header-appear-active {
+  top: 0;
+  transition: 1.2s ease-out;
+}
+
+.side-appear {
+  left: -80px;
+}
+
+.side-appear.side-appear-active {
+  left: 38px;
+  transition: 1.2s ease-out;
+}
+
+.scroll-appear {
+  margin-right: -100px;
+}
+
+.scroll-appear.scroll-appear-active {
+  margin-right: 0px;
+  transition: 1.2s ease-out;
 }
 
 /* Socials */
@@ -218,6 +255,43 @@ main h3 {
   color: whitesmoke;
 }
 
+/* .instagram-preview {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  margin: 80px 0 0 10px;
+  position: relative;
+}
+
+.instagram-preview div {
+  background-color: #f1f1f1;
+  width: 220px;
+  height: 220px;
+  margin: 15px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 30px;
+  position: relative;
+  transition: ease .3s;
+}
+
+
+.instagram-preview div img {
+  border: none;
+  overflow: hidden;
+  object-fit: cover;
+  height: 100%;
+  max-width: 100%;
+  opacity: 1;
+  transition: ease .5s;
+}
+
+.instagram-preview div:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: ease .3s;
+} */
+
 main div.preview div img {
   border: none;
   overflow: hidden;
@@ -288,20 +362,29 @@ main div.preview div:hover .links{
 }
 
 .projects {
-  margin-bottom: 300px;
+  margin-bottom: 200px;
+}
+
+.projects h3.project-type {
+  margin: 0;
+  opacity: 0.5;
 }
 
 .projects h3.project-type#web {
   left: -50px;
   top: 0;
-  margin: 0;
   float: right;
-  opacity: 0.5;
+}
+
+.projects h3.project-type#design {
+  right: -50px;
+  top: 40px;
+  float: left;
 }
 
 /* About */
 .about {
-  margin-bottom: 200px;
+  margin-bottom: 150px;
   height: 750px;
 }
 
@@ -354,6 +437,13 @@ main div.preview div:hover .links{
   text-align: right;
   font-size: 6em;
   width: 800px;
+}
+
+.about h4#am-about {
+  font-size: 1.8em;
+  opacity: 0.25;
+  margin-top: 50px;
+  margin-right: 125px;
 }
 
 .contact {

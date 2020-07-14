@@ -4,6 +4,9 @@ import jammming from '../images/jammming.PNG';
 import ravenous from '../images/ravenous.PNG';
 import Github from '../icons/github';
 import FadeInSection from '../scripts/fade';
+/* import peace from '../images/instagram/Peace.png';
+import rabbit from '../images/instagram/Rabbithand.png';
+import homer from '../images/instagram/Homer.png'; */
 
 export default class Projects extends Component {
     render(){
@@ -48,28 +51,24 @@ export default class Projects extends Component {
                     </a>
                 </div>
                 </FadeInSection>
+                {/* <h3 className="project-type" id="design">designs</h3>
                 <div className="instagram-preview">
                     <div>
-                        <a href="http://astype.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
-                            <img src={ravenous} alt="astype typing test"></img>
+                        <a href="https://www.instagram.com/p/CCckuOLB6_o/" target="_blank" rel="noopener noreferrer" className="site-direct">
+                            <img src={peace} alt="peace"></img>
                         </a>
                     </div>
                     <div>
-                        <a href="http://astype.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
-                            <img src={ravenous} alt="astype typing test"></img>
+                        <a href="https://www.instagram.com/p/CBXjBtNBR2J/" target="_blank" rel="noopener noreferrer" className="site-direct">
+                            <img src={rabbit} alt="rabbit"></img>
                         </a>
                     </div>
                     <div>
-                        <a href="http://astype.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
-                            <img src={ravenous} alt="astype typing test"></img>
+                        <a href="https://www.instagram.com/p/CA6Tfh9BE0-/" target="_blank" rel="noopener noreferrer" className="site-direct">
+                            <img src={homer} alt="homer"></img>
                         </a>
                     </div>
-                    <div>
-                        <a href="http://astype.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
-                            <img src={ravenous} alt="astype typing test"></img>
-                        </a>
-                    </div>
-                </div>
+                </div> */}
             </div>
         );
     }

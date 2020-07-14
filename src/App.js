@@ -9,11 +9,14 @@ import Scroll from './scripts/scroll';
 import { Link, animateScroll as scroll } from "react-scroll";
 import peace from './images/peace.png';
 import wave from './images/wave.png';
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
 
 function App() {
   return (
     <div className="App">
       <div id="header-bg"></div>
+      <ReactCSSTransitionGroup transitionName="header" transitionAppear={true}
+      transitionAppearTimeout={1500}>
       <header>
         <Link
             activeClass="active"
@@ -57,22 +60,33 @@ function App() {
           </li>
         </ul>
       </header>
+      </ReactCSSTransitionGroup>
       
+      <ReactCSSTransitionGroup transitionName="scroll" transitionAppear={true}
+      transitionAppearTimeout={1500}>
+        <Scroll />
+      </ReactCSSTransitionGroup>
+      
+      <ReactCSSTransitionGroup transitionName="side" transitionAppear={true}
+      transitionAppearTimeout={1500}>
+        <Socials />
+      </ReactCSSTransitionGroup>
+
+      <ReactCSSTransitionGroup
+      transitionName="page" transitionAppear={true}
+      transitionAppearTimeout={2500}>
       <div class="intro">
         <Particles />
         <h1><Typewriter
             onInit={(typewriter) => {
               typewriter.
-              pauseFor(1000)
-              .typeString('Hi, My Name Is Alex.')
+              pauseFor(2800)
+              .typeString('Welcome')
               .start();
             }}
           /></h1>
       </div>
 
-      <Scroll />
-      
-      <Socials />
       <main>
         <Projects />
         <div id="ab"></div>
@@ -85,8 +99,9 @@ function App() {
                 <img id="peace" src={peace}></img>
               </div>
               <div id="right-about">
+                <h4 id="am-about">Hi, my name is</h4>
                 <h5 id="name-about">Alex Simpson</h5>
-                <h4 id="am-about">I am a</h4>
+                <h4 id="what-about">I am a</h4>
                 <h1 id="about-typewriter"><Typewriter 
                 options={{ loop: true, delay: 75 }}
                 onInit={(typewriter) => {
@@ -123,6 +138,7 @@ function App() {
             duration= {500}>
             back to the top</Link></span>
       </footer>
+      </ReactCSSTransitionGroup>
     </div>
   );
 }
