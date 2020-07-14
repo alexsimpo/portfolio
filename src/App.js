@@ -8,6 +8,7 @@ import Projects from './content/projects';
 import Scroll from './scripts/scroll';
 import { Link, animateScroll as scroll } from "react-scroll";
 import peace from './images/peace.png';
+import wave from './images/wave.png';
 
 function App() {
   return (
@@ -75,11 +76,14 @@ function App() {
       <main>
         <Projects />
         <div id="ab"></div>
+        <FadeInSection position="up">
           <div className="about">
-            <FadeInSection position="up">
-            <h3>02</h3>
-            <h2>about</h2>
-              <img id="peace" src={peace}></img>
+              <h3>02</h3>
+              <h2>about</h2>
+              <div id="hand-images">
+                <img id="wave" src={wave}></img>
+                <img id="peace" src={peace}></img>
+              </div>
               <div id="right-about">
                 <h5 id="name-about">Alex Simpson</h5>
                 <h4 id="am-about">I am a</h4>
@@ -95,8 +99,9 @@ function App() {
                 }}
               /></h1>
             </div>
-            </FadeInSection>
           </div>
+        </FadeInSection>
+
         <div className="ct"></div>
           <div className="contact">
             <FadeInSection position="up">

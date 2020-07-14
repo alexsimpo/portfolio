@@ -245,13 +245,13 @@ main div.preview div.single {
   line-height: 75px;
   font-size: 30px;
   position: relative;
-  transition: ease .5s;
+  transition: ease .3s;
 }
 
 main div.preview div.single:hover {
   cursor: pointer;
   transform: scale(1.05);
-  transition: ease .5s;
+  transition: ease .3s;
 }
 
 main div.preview div .links {
@@ -263,7 +263,7 @@ main div.preview div .links {
   overflow: hidden;
   width: 0%;
   height: 60px;
-  transition: .5s ease;
+  transition: .3s ease;
   z-index: 10;
 }
 
@@ -279,7 +279,7 @@ main div.preview div .links {
 
 main div.preview div:hover img {
   opacity: 0.85;
-  transition: ease .5s;
+  transition: ease .3s;
 }
 
 main div.preview div:hover .links{
@@ -291,18 +291,50 @@ main div.preview div:hover .links{
   margin-bottom: 300px;
 }
 
+.projects h3.project-type#web {
+  left: -50px;
+  top: 0;
+  margin: 0;
+  float: right;
+  opacity: 0.5;
+}
+
 /* About */
 .about {
-  margin-bottom: 300px;
+  margin-bottom: 200px;
+  height: 750px;
 }
 
 .about h2 {
   margin-bottom: 50px;
 }
 
-.about #peace{
+.about #peace, #wave{
   max-height: 600px;
   width: auto;
+  left: 0;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  transform-origin: center;
+}
+
+#hand-images {
+  float: left;
+  max-width: 650px;
+}
+
+#peace {
+  visibility: hidden;
+  position: absolute;
+}
+
+#hand-images:hover #peace {
+  visibility: visible;
+  transform: scale3d(1.2, 1.2, 1.2);
+}
+
+#hand-images:hover #wave {
+  visibility: hidden;
+  transform: scale3d(1.2, 1.2, 1.2);
 }
 
 .about h5#name-about {
@@ -311,13 +343,11 @@ main div.preview div:hover .links{
   margin-bottom: 20px;
 }
 
-#am-about {
-}
-
 .about div#right-about {
   float: right;
   max-width: 800px;
   margin-right: 100px;
+  margin-left: auto;
 }
 
 .about h1#about-typewriter {

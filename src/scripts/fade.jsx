@@ -21,4 +21,3 @@ const FadeInSection = (props) => {
 
 export default FadeInSection;
 
-  
