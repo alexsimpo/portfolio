@@ -32,7 +32,6 @@ h3 {
 }
 
 h4 {
-  text-align: right;
   font-size: 3em;
   color: whitesmoke;
 }
@@ -216,7 +215,7 @@ header ul li {
 
 /* Intro Shot */
 .intro {
-  width: 1500px;
+  max-width: 1500px;
   margin: 100px auto 50px auto;
   position: relative;
 }
@@ -306,13 +305,15 @@ main div.preview {
   display: flex;
   flex-wrap: wrap;
   align-content: space-between;
+  justify-content: center;
+  align-items: center;
   margin: 40px auto 0px auto;
   position: relative;
 }
 
 main div.preview div.single {
   background-color: #f1f1f1;
-  width: 725px;
+  width: 715px;
   height: 405px;
   margin: 25px;
   text-align: center;
@@ -382,10 +383,32 @@ main div.preview div:hover .links{
   float: left;
 }
 
+@media only screen and (max-width: 1600px) {
+  main div.preview div.single {
+    width: 560px;
+    height: 315px;
+    margin: 15px;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    position: relative;
+    transition: ease .3s;
+  }
+
+}
+
 /* About */
 .about {
-  margin-bottom: 150px;
+  margin-bottom: 200px;
   height: 750px;
+}
+
+#about-header {
+  margin-bottom: 50px;
+}
+
+.about h4 {
+  text-align: right;
 }
 
 .about h2 {
@@ -393,8 +416,8 @@ main div.preview div:hover .links{
 }
 
 .about #peace, #wave{
-  max-height: 600px;
-  width: auto;
+  height: auto;
+  max-width: 600px;
   left: 0;
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
   transform-origin: center;
@@ -446,8 +469,177 @@ main div.preview div:hover .links{
   margin-right: 125px;
 }
 
+@media only screen and (max-width: 1600px) {
+  .about {
+    margin: auto;
+    width: 1100px;
+    height: 600px;
+  }
+  
+  .about #hand-images {
+    width: 400px;
+  }
+
+  .about #peace, #wave {
+    width: 400px;
+  }
+
+  .about div#right-about {
+    width: 700px;
+    margin-right: 0px;
+  }
+
+  .about h1#about-typewriter{
+    width: 700px;
+    font-size: 5em;
+  }
+
+}
+
+/* Contact */
 .contact {
   height: 900px;
+  text-align: left;
+}
+
+.contact h4 {
+  opacity: 0.25;
+  margin-left: 50px;
+}
+
+.contact h4#socials-contact {
+  margin-left: 200px;
+}
+
+.contact h5 {
+  opacity: 1;
+  font-size: 4em;
+  margin: 40px 0;
+}
+
+.contact h5 a {
+  position: relative;
+  color: #f0e4a4;
+  padding-bottom: 8px;
+}
+
+.contact h5 a:after {
+  content: '';
+  height: 6px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  width: 0%;
+  background: whitesmoke;
+  transition: 0.6s;
+}
+
+.contact h5 a:hover:after {
+  width: 100%;
+  opacity: 1;
+}
+
+.contact h5 a:hover {
+  color: whitesmoke;
+}
+
+#left-contact {
+  float: left;
+  max-width: 800px;
+  margin: 150px 0 0 100px;
+  z-index: 100;
+}
+
+#left-contact .socials {
+  position: relative;
+  display: inline-block;
+  bottom: 0;
+  margin-top: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+#left-contact .socials div {
+  display: inline-block;
+  width: 75px;
+  height: 75px;
+  border-radius: 50px;
+  margin: 0 0 0 30px;
+  opacity: 0.25;
+}
+
+#left-contact .socials svg, #left-contact .socials svg#git {
+  margin-top: 17px;
+  width: 40px;
+  height: 40px;
+}
+
+#left-contact .socials div:hover {
+  background-color: whitesmoke;
+  opacity: 1;
+  transition: ease .5s;
+}
+
+#left-contact .socials div:hover > svg {
+  fill: #1d1e20;
+  transition: ease .5s;
+}
+
+#map {
+  z-index: -1;
+  width: 500px;
+  height: 500px;
+  float: right;
+  margin: 150px 100px 0 0;
+  position: relative;
+}
+
+#map img {
+  border: none;
+  overflow: hidden;
+  object-fit: cover;
+  height: 100%;
+  max-width: 100%;
+}
+
+#map h6 {
+  font-size: 1.2em;
+  color: #97B9EB;
+  position: absolute;
+  right: 23%;
+  bottom: 47%
+}
+
+@media only screen and (max-width: 1600px) {
+  .contact {
+    height: 600px;
+  }
+  
+  #left-contact {
+    float: left;
+    max-width: 600px;
+    margin: 100px 0 0 50px;
+  }
+
+  #map {
+    width: 400px;
+    height: 400px;
+    float: right;
+    margin: 100px 0 0 0;
+  }
+
+  #left-contact h4 {
+    font-size: 2em;
+  }
+
+  #left-contact a {
+    font-size: 1em;
+  }
+
+  .contact h4#socials-contact {
+    margin-left: 140px;
+  }
 }
 
 /* Footer */
@@ -455,7 +647,7 @@ footer {
   width: 100%;
   text-align: center;
   height: 25px;
-  margin: 50px auto 50px auto;
+  margin: 50px auto 40px auto;
   max-width: 1500px;
   color: whitesmoke;
 }
@@ -468,4 +660,8 @@ footer span#b {
   float: right;
   cursor: pointer;
   text-decoration: underline;
+}
+
+span#b a{
+  font-size: 1em;
 }

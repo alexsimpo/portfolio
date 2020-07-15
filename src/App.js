@@ -5,11 +5,11 @@ import Typewriter from 'typewriter-effect';
 import FadeInSection from './scripts/fade';
 import Particles from './scripts/particles';
 import Projects from './content/projects';
+import About from './content/about';
 import Scroll from './scripts/scroll';
 import { Link, animateScroll as scroll } from "react-scroll";
-import peace from './images/peace.png';
-import wave from './images/wave.png';
-import ReactCSSTransitionGroup from 'react-addons-css-transition-group'
+import ReactCSSTransitionGroup from 'react-addons-css-transition-group';
+import map from './images/map.PNG';
 
 function App() {
   return (
@@ -75,7 +75,7 @@ function App() {
       <ReactCSSTransitionGroup
       transitionName="page" transitionAppear={true}
       transitionAppearTimeout={2500}>
-      <div class="intro">
+      <div className="intro">
         <Particles />
         <h1><Typewriter
             onInit={(typewriter) => {
@@ -89,40 +89,25 @@ function App() {
 
       <main>
         <Projects />
+
         <div id="ab"></div>
-        <FadeInSection position="up">
-          <div className="about">
-              <h3>02</h3>
-              <h2>about</h2>
-              <div id="hand-images">
-                <img id="wave" src={wave}></img>
-                <img id="peace" src={peace}></img>
-              </div>
-              <div id="right-about">
-                <h4 id="am-about">Hi, my name is</h4>
-                <h5 id="name-about">Alex Simpson</h5>
-                <h4 id="what-about">I am a</h4>
-                <h1 id="about-typewriter"><Typewriter 
-                options={{ loop: true, delay: 75 }}
-                onInit={(typewriter) => {
-                typewriter
-                .typeString('<span style="color: #f0e4a4">Web Developer</span>').pauseFor(1200)
-                .deleteAll().typeString('<span style="color: #e91e63">Digital Illustrator</span>').pauseFor(1200)
-                .deleteAll().typeString('<span style="color: #26D480">Programmer</span>').pauseFor(1200)
-                .deleteAll().typeString('<span style="color: #97B9EB">UX Designer</span>').pauseFor(1200)
-                .start();
-                }}
-              /></h1>
-            </div>
-          </div>
-        </FadeInSection>
+        <About />
 
         <div className="ct"></div>
           <div className="contact">
             <FadeInSection position="up">
-            <h3>03</h3>
-            <h2>contact</h2>
-
+              <h3>03</h3>
+              <h2>contact</h2>
+              <div id="left-contact">
+                <h4 id="chat-contact">Chat with me at</h4>
+                <h5 id="email-contact"><a href="mailto: alxsimpson@gmail.com">alxsimpson@gmail.com</a></h5>
+                <h4 id="socials-contact">or on any of my socials</h4>
+                <Socials />
+              </div>
+              <div id="map">
+                <h6>Found in Brisbane, Australia</h6>
+                <img src={map} alt="map"></img>
+              </div>
             </FadeInSection>
           </div>
       </main>
