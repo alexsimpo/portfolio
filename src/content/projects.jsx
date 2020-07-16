@@ -15,7 +15,7 @@ export default class Projects extends Component {
                 <FadeInSection position="up">
                 <h3>01</h3>
                 <h2>projects</h2>
-                <h3 className="project-type" id="web">web</h3>
+                {/* <h3 className="project-type" id="web">web</h3> */}
                 <div className="preview">
                     <a href="http://astype.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
                     <div className="single">

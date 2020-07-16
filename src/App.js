@@ -94,10 +94,10 @@ function App() {
         <About />
 
         <div className="ct"></div>
+        <FadeInSection position="up">
+          <h3>03</h3>
+          <h2>contact</h2>
           <div className="contact">
-            <FadeInSection position="up">
-              <h3>03</h3>
-              <h2>contact</h2>
               <div id="left-contact">
                 <h4 id="chat-contact">Chat with me at</h4>
                 <h5 id="email-contact"><a href="mailto: alxsimpson@gmail.com">alxsimpson@gmail.com</a></h5>
@@ -108,8 +108,8 @@ function App() {
                 <h6>Found in Brisbane, Australia</h6>
                 <img src={map} alt="map"></img>
               </div>
-            </FadeInSection>
           </div>
+        </FadeInSection>
       </main>
 
       <footer>

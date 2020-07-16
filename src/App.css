@@ -399,8 +399,8 @@ main div.preview div:hover .links{
 
 /* About */
 .about {
-  margin-bottom: 200px;
-  height: 750px;
+  margin-bottom: 100px;
+  height: 550px;
 }
 
 #about-header {
@@ -426,6 +426,8 @@ main div.preview div:hover .links{
 #hand-images {
   float: left;
   max-width: 650px;
+  position: relative;
+  top: -20px;
 }
 
 #peace {
@@ -478,6 +480,7 @@ main div.preview div:hover .links{
   
   .about #hand-images {
     width: 400px;
+    top: 20px;
   }
 
   .about #peace, #wave {
@@ -508,7 +511,7 @@ main div.preview div:hover .links{
 }
 
 .contact h4#socials-contact {
-  margin-left: 200px;
+  margin-left: 165px;
 }
 
 .contact h5 {
@@ -614,20 +617,30 @@ main div.preview div:hover .links{
 @media only screen and (max-width: 1600px) {
   .contact {
     height: 600px;
+    width: 1100px;
+    margin: auto;
   }
   
   #left-contact {
     float: left;
-    max-width: 600px;
+    max-width: 500px;
     margin: 100px 0 0 50px;
   }
 
   #map {
     width: 400px;
     height: 400px;
-    float: right;
-    margin: 100px 0 0 0;
+    margin-right: 0;
   }
+
+  #map h6 {
+    font-size: 1.2em;
+    color: #97B9EB;
+    position: absolute;
+    right: 17%;
+    bottom: 47%
+  }
+  
 
   #left-contact h4 {
     font-size: 2em;
@@ -638,7 +651,7 @@ main div.preview div:hover .links{
   }
 
   .contact h4#socials-contact {
-    margin-left: 140px;
+    margin-left: 90px;
   }
 }
 
