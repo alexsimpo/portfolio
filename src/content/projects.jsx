@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import astype from '../images/astype.PNG';
 import jammming from '../images/jammming.PNG';
 import ravenous from '../images/ravenous.PNG';
+import game from '../images/2048.PNG';
 import Github from '../icons/github';
 import FadeInSection from '../scripts/fade';
 /* import peace from '../images/instagram/Peace.png';
@@ -41,12 +42,12 @@ export default class Projects extends Component {
                         <img src={ravenous} alt="astype typing test"></img>
                     </div>
                     </a>
-                    <a href="http://astype.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
+                    <a href="http://as-2048.surge.sh/" target="_blank" rel="noopener noreferrer" className="site-direct">
                     <div className="single">
                         <div className="links">
-                        <Github source="https://github.com/alexsimpo/as-type" />
+                        <Github source="https://github.com/alexsimpo/as-2048" />
                         </div>
-                        <img src={astype} alt="astype typing test"></img>
+                        <img src={game} alt="2048 game"></img>
                     </div>
                     </a>
                 </div>
