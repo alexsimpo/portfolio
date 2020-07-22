@@ -113,7 +113,7 @@ function App() {
       </main>
 
       <footer>
-        <span id="c">&#169; copyright your mum</span>
+        <span id="c">&#169; copyright 2020</span>
         <span id="b"><Link
             activeClass="active"
             to="intro"

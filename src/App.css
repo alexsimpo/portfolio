@@ -99,11 +99,11 @@ a {
 }
 
 .side-appear {
-  left: -80px;
+  margin-left: -100px;
 }
 
 .side-appear.side-appear-active {
-  left: 38px;
+  margin-left: 0px;
   transition: 1.2s ease-out;
 }
 
