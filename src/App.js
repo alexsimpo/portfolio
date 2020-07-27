@@ -69,7 +69,9 @@ function App() {
       
       <ReactCSSTransitionGroup transitionName="side" transitionAppear={true}
       transitionAppearTimeout={1500}>
+        <div id="fixed-small">
         <Socials />
+        </div>
       </ReactCSSTransitionGroup>
 
       <ReactCSSTransitionGroup

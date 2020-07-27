@@ -8,6 +8,13 @@ html::-webkit-scrollbar {
   display: none;
 }
 
+@media only screen and (max-width: 450px) {
+  html{
+    max-width: 450px;
+  }
+
+}
+
 body {
   background-color: #1d1e20;
   max-width: 96%;
@@ -45,6 +52,16 @@ h5 {
 a {
   font-size: 1.2em;
   text-decoration: none;
+}
+
+@media only screen and (max-width: 450px) {
+  h2{
+    font-size: 3em;
+  }
+
+  h1, h2, h3, h4, h5, a {
+    text-align: center;
+  }
 }
 
 /* Fade In Effect */
@@ -120,6 +137,7 @@ a {
 .socials {
   position: fixed;
   bottom: 50px;
+  z-index: 100;
 }
 
 .socials div {
@@ -153,6 +171,13 @@ a {
 .socials div:hover > svg {
   fill: #ffffff;
   transition: ease .5s;
+}
+
+@media only screen and (max-width: 450px) {
+  #fixed-small, .progress-container{
+    display: none;
+  }
+
 }
 
 /* Header */
@@ -213,6 +238,19 @@ header ul li {
   opacity: 1;
 }
 
+@media only screen and (max-width: 450px) {
+  header h1{
+    text-align: center;
+    font-size: 2em;
+    float: none;
+  }
+
+  header .navbar {
+    display: none;
+  }
+
+}
+
 /* Intro Shot */
 .intro {
   max-width: 1500px;
@@ -230,8 +268,14 @@ header ul li {
   text-align: center;
   max-width: 900px;
   margin: auto;
-}
+} 
 
+@media only screen and (max-width: 450px) {
+  .intro {
+    display: none;
+  }
+
+}
 
 /* Main */ 
 main {
@@ -242,13 +286,11 @@ main {
 main h2 {
   height: 50px;
   max-width: 400px;
-  position: relative;
   left: 60px;
   color: whitesmoke;
 }
 
 main h3 {
-  position: relative;
   left: 50px;
   top: 10px;
   color: whitesmoke;
@@ -397,6 +439,27 @@ main div.preview div:hover .links{
 
 }
 
+@media only screen and (max-width: 450px) {
+  main {
+    margin: 100px 2.5% 0 2.5%;
+  }
+
+  main div.preview div.single {
+    width: 100%;
+    height: 220px;
+    margin: 0 0 25px 0;
+    text-align: center;
+    line-height: 75px;
+    font-size: 30px;
+    position: relative;
+    transition: ease .3s;
+  }
+
+  .projects {
+    margin-bottom: 50px;
+  }
+}
+
 /* About */
 .about {
   margin-bottom: 100px;
@@ -497,6 +560,47 @@ main div.preview div:hover .links{
     font-size: 5em;
   }
 
+}
+
+@media only screen and (max-width: 450px) {
+  .about {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 100px;
+  }
+
+  h2#about-header {
+    margin: 0;
+  }
+  
+  .about #hand-images {
+    width: 100%;
+    top: 20px;
+  }
+
+  .about #peace, #wave {
+    width: 100%;
+  }
+
+  .about h5#name-about {
+    font-size: 2em;
+  }
+
+  .about div#right-about {
+    width: 100%;
+    margin-right: 0px;
+  }
+
+  .about h4#am-about, .about h4#what-about{
+    text-align: center;
+    font-size: 1.5em;
+  }
+
+  .about h1#about-typewriter{
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+  }
 }
 
 /* Contact */
@@ -653,6 +757,57 @@ main div.preview div:hover .links{
   .contact h4#socials-contact {
     margin-left: 90px;
   }
+}
+
+@media only screen and (max-width: 1600px) {
+  .contact {
+    width: 100%;
+    height: 850px;
+    margin: auto;
+  }
+  
+  #left-contact {
+    max-width: 100%;
+    margin: 50px 0 0 0;
+    text-align: center;
+  }
+
+  #left-contact h4 {
+    font-size: 2em;
+  }
+
+  #left-contact a {
+    font-size: 1em;
+  }
+
+  h4#chat-contact {
+    margin: 0;
+  }
+
+  h5#email-contact{
+    font-size: 1.8em;
+  }
+
+  .contact h4#socials-contact {
+    margin-left: 0;
+  }
+
+  #map {
+    width: 100%;
+    height: 100vw;
+    margin-top: 45px;
+    float: left;
+  }
+
+  #map h6 {
+    font-size: 1.2em;
+    color: #97B9EB;
+    position: absolute;
+    right: 17%;
+    bottom: 47%
+  }
+  
+
 }
 
 /* Footer */
